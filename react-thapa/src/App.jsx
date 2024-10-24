@@ -42,7 +42,7 @@ export const App2 =()=>{
  return (
     <div>
       <div>
-        <img src="qot.jpg"
+        <img src="qot.jpg"></img>
       </div>
       <h2> Name: Sheldon </h2>
       <h3>Rating: 8.2</h3>
