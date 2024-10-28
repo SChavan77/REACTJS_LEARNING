@@ -1,59 +1,84 @@
-/*import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App*/
 export const App =()=>{
-  return <h1> Hello! Sushmitha </h1>
+    return (
+        <>
+            <>
+            <MyComponent />
+            </>
+            <>
+            <NetFlixSeries />
+            </>
+        </>
+       
+    );
+}
+
+function MyComponent(){
+    const value="Learning";
+    return <p> Hii !! {value}</p>
 }
 
 
-export const App2 =()=>{
- return (
+const NetFlixSeries =()=>{ //It's not a function. It's a component. PascalCase
+    const name="Sheldon";
+    let age=16;
+    let canWatch="Not Available";
+    if(age>=18) 
+        canWatch="Watch Now";
+    //or here also we can insert
+   const returnGenre =()=>{
+        return "Comedy";
+    }
+
+    const canWatchFunc =() =>{
+        if(age>=18) 
+            canWatch="Watch Now";
+        return "Not Available";
+    }
+
+    return (
     <div>
-      <div>
-        <img src="qot.jpg"></img>
-      </div>
-      <h2> Name: Sheldon </h2>
-      <h3>Rating: 8.2</h3>
-      <p>lorem</p>
-    </div>
-  ) ;
+        <div>
+        <img src="/images/Sheldon.jpg" alt="sheldon.jpg" width="40%" height="40%"/>
+        </div>
+    <h2> Name: {name} </h2>
+    <h3> Rating: 8.2</h3>
+    <p>lorem</p>
+    <p> Genre: {returnGenre()}</p>
+    <button>{canWatchFunc()}</button>
+  </div>
+  );
 }
 
 
 
-// Attributes of HTML= props in React
-//Internally happens: React.createElement("h1",null, "Hello! Sushmitha");
+/*const returnGenre =()=>{
+    return "Comedy";
+}*/
 
-//For non-clsing tags like <img. we need to explicitly close.
+/**
+ * 
+ * Note: It could be operations, function calls & other JS expressions which produce a value.
+
+ * Dynamic Values:
+ To add any variable in the component in JSX, we use `{}` syntax.
+ 
+ Dynamic Expressions:
+ JSX allows to write JS expressions inside `{}`.
+
+ Function calls:
+ Inside JSX, 
+ Eg: Inside NetFlixSeries (JSX), we have another JS call. returnGenre
+ * 
+
+ CONDITIONS in JSX:
+<button>{age>=18? "Watch Now":"Not Available"}</button>
+
+If complex conditions, 
+0 way: do it outside the tags. And return via dynamic value way-canWatch.
+<button>{canWatch}</button>
+
+1 way: Encapsulate such logic inside a function. 
+Additional benefic, to apply such logic, if it requires some dynamic value to be checked, then we can pass those variables as a paremeter to undergo a logic operations.
+ */

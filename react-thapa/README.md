@@ -26,3 +26,69 @@ Conventions:
 * PascalCase: Component Names, Class names, types 
 * snake_case: not much used ('_')
 * kebab-case: file names, css classes, ids etc ('-')
+
+Tool to React JSX to JS code converter: https://babeljs.io/repl
+
+## Components of REACT
+
+Refer: Class Based Components, Functional Components
+In Class Based Components: We need to import {Components} in import react line, explicitly.
+
+Hot Module replacement: Automatic rendering in web server. (provided by Vite-frontend build tool)
+
+## REACT FRAGMENTS
+
+Earlier, 
+
+`return[<p>Hii</p>, <strong>02</strong>];`
+
+Reach 16, Fragment introduced. 
+
+ `<Fragment>` or `<>` (shorthand version)
+ 
+ Using Fragment, we can return multiple elements wihtout adding extra nodes to the DOM.
+
+If we see here,
+```javascript
+    <div>  //<----extra divs
+      <NetFlixSeries /> 
+      <NetFlixSeries />
+      <NetFlixSeries />
+    </div> 
+ ````
+
+ So using Array, we can eliminate the extra div(node), which is hectic OR using Fragment
+
+ ```javascript
+    <React.Fragment>
+      <NetFlixSeries /> 
+      <NetFlixSeries />
+      <NetFlixSeries />
+    </React.Fragment>
+ ```
+ We can use `<React.Fragment>` OR `<Fragment>` OR `<>`
+
+
+ ## Dynamic Values/Expressions/FunctionCall in JSX
+
+ If we want to pass a dynamic value to a component, we need a variable in the Component.
+ To add any variable in the component in JSX, we use `{}` syntax.
+ 
+ JSX allows to write JS expressions inside `{}`.
+ It could be operations, function calls & other JS expressions which produce a value.
+ 
+ ## Conditional Values in JSX
+ Usually, ternary in `{}`.
+ 
+ Eg: 
+ `<button>{age>=18? "Watch Now":"Not Available"}</button>`
+
+If complex conditions, 
+do it outside the tags. And return via dynamic value way.
+`if(ag>=18) canWatch="Watch Now";`
+
+`<button>{canWatch}</button>`
+
+Another way: Encapsulate such logic inside a function. 
+Additional benefic, to apply such logic, if it requires some dynamic value to be checked, then we can pass those variables as a paremeter to undergo a logic operations.
+
