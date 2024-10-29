@@ -92,3 +92,37 @@ do it outside the tags. And return via dynamic value way.
 Another way: Encapsulate such logic inside a function. 
 Additional benefic, to apply such logic, if it requires some dynamic value to be checked, then we can pass those variables as a paremeter to undergo a logic operations.
 
+
+## Export & Import in ReactJS
+* Default Exp & Imp
+* Named Exp & Imp
+* Mixed Exp & Imp
+
+
+**1) DEFAULT**
+
+Default Export: A file can have only one default export.
+Default Import: When importing a def export. you can name the import whatver we like.
+But best practice is to use the same name.
+
+
+**2) NAMED**
+
+Named Export: declare the component as export. A file can have multiple named exports.
+Named Import: mention the import in {} whenever we're importing.
+        {Importing name} should be same as export declared component name
+
+Eg: Header & Footer combined as one .jsx file. here, 2 components export block will come.
+
+
+**3) MIXED**
+
+Mixed Export: can have 1 default & multiple exports in any file.
+Mixed Import: All named in {}s, default can be imported in a separate line or followed by ','
+
+Eg:
+import NetFlixSeries,{Header,Footer} from "./components/NetflixSeries";
+
+OR
+import NetFlixSeries from "./omponents/NetflixSeries";
+import {Header,Footer} from "./components/NetflixSeries";
