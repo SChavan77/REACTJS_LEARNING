@@ -1,6 +1,7 @@
+
 import React from "react";
 
-const NetFlixSeries =()=>{ //NAMED TYPE
+const NetFlixSeries =()=>{ //NAMED TYPE??
     const name="Sheldon";
     let age=16;
     let canWatch="Not Available";
@@ -61,7 +62,8 @@ export default NetFlixSeries; //DEFAULT type, MIXED type
    Named Export: declare the component as export. A file can have multiple named exports.
    Named Import: mention the import in {} whenever we're importing.
         {Importing name} should be same as export declared component name
-        Eg: Header & Footer combined as one .jsx file. here, 2 components export block will come. 
+        Eg: Header & Footer combined as one .jsx file. here, 2 components export block will come.
+        Multiple Named Components from the same component file, we can use it in {} with , 
  
  * 3) MIXED
    Mixed Export: can have 1 default & multiple exports in any file.

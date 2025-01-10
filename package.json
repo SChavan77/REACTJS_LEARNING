@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bun": "^1.1.38",
+    "react-icons": "^5.4.0"
+  }
+}

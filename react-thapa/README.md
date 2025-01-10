@@ -126,3 +126,22 @@ import NetFlixSeries,{Header,Footer} from "./components/NetflixSeries";
 OR
 import NetFlixSeries from "./omponents/NetflixSeries";
 import {Header,Footer} from "./components/NetflixSeries";
+
+## LOOPING:
+.map()
+Key is mandotary.
+
+## PROPS:
+App-> NetflixSeries -> map:ul,il
+The Map & Card make a separate component & use it.
+
+## REACT DESTRUCTURING PROPS:
+
+react/prop-types: 
+https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+Add this 'react/prop-types':'off', in eslint.cofig.js file.
+
+### How to pass JSX in Props
+If the JSX has directly tags, props= <div>...</div>
+How to access these parts of the components?
+
