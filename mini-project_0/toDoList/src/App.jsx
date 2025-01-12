@@ -1,10 +1,10 @@
 import './App.css'
-import Todo from "./component/Todo.jsx";
+import Keys from "./component/Keys.jsx";
 
 const App =() =>{
   return(
     <>
-      <Todo />
+      <Keys />
     </>
   );
 }
