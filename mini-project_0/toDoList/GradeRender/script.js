@@ -40,3 +40,15 @@ document.addEventListener ("DOMContentLoaded",
 )
 
 document.getElementById("marks")
+
+
+for(let i=0;;i++){
+    console.log("St");
+    if(i>5)
+    {
+        console.log("break");
+        break;
+    }
+}
+console.log("Loop Ended");
+
