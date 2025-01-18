@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react'
 import './App.css'
-import Index from './component/index.jsx'
-import CleanUp from './component/cleanUp/CleanUp.jsx'
+
+import HowNotToFetchApi from './component/fetchAPI/HowNotToFetchApi.jsx'
+import HowToFetchApi from './component/fetchAPI/HowtoFetchAPI.jsx'
+import Pikachu from './component/fetchAPI/Pickachu.jsx'
 
 const App =()=> {
   return (
     <>
-      <CleanUp/>
+      <Pikachu/>
     </>
   )
 }
