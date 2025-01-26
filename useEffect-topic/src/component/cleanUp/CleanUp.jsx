@@ -13,13 +13,13 @@ const CleanUp  =()=>{
 
     //setTimeOut, fetch API & other Async operations : wil come udner webAPI
 
+    //When the component mounts, useEffect runs it;s effect funtion to prfotm it's operation - atleast in the beginning
+    //Whenver the dependency's value changes, that time it's useEffect reruns
     useEffect (()=>{
 
        const timer=setInterval(()=>{
             setCount((prev)=>prev+1) ;//setCount((prev)=>prev+1)
         },1000);
-
-        
         return ()=> clearInterval(timer) //then, prev will consider actual count value
     },[])
 
